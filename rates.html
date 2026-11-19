@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laboratory Rates &amp; 54 GAMOT Medicines | Sagip Buhay Medical Services</title>
+  <meta name="description" content="Search Sagip Buhay Medical Services' transparent laboratory, diagnostic, and vaccine rates with our interactive estimator, and browse 54 covered medicines under PhilHealth GAMOT.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand-link"><img src="assets/images/logo.png" alt="Sagip Buhay Medical Services" class="brand-logo"></a>
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="corporate.html">Corporate Programs</a></li>
+          <li><a href="employees.html">For Employees</a></li>
+          <li><a href="rates.html" class="active">Rates &amp; Medicines</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <a href="index.html#contact" class="btn btn-primary btn-sm">Request Corporate Quote</a>
+        <button type="button" class="menu-toggle" id="menuToggle" aria-label="Toggle Menu" aria-expanded="false">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> <span>/</span> <span>Rates &amp; Medicines</span></div>
+      <span class="eyebrow">Transparent Pricing &amp; Pharmacy Directory</span>
+      <h1>Laboratory Rates &amp; 54 PhilHealth GAMOT Medicines</h1>
+      <p>Use our interactive estimator to build a test list for your clinic visit or corporate APE quotation, or search the 54 outpatient medicines available at Sagip Buhay Botika.</p>
+    </div>
+  </section>
+
+  <main>
+    <!-- Lab Rates & Estimator -->
+    <section class="section" id="rates">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Standard Clinic Reference Rates</span>
+          <h2>Laboratory, Diagnostic &amp; Immunization Menu</h2>
+          <p class="section-lead">Standard walk-in rates for individuals. <strong>Corporate accounts receive preferential group discounts</strong> based on headcount and package scope.</p>
+        </div>
+
+        <div class="rates-layout">
+          <div>
+            <div style="margin-bottom:20px;">
+              <div class="search-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                <input type="search" id="rateSearch" class="search-input" placeholder="Search tests or vaccines (e.g., CBC, Lipid Profile, HbA1C, ECG, Flu Vaccine)...">
+              </div>
+              <div class="filter-pills" id="rateCategoryPills"></div>
+            </div>
+            <div id="ratesContainer"></div>
+          </div>
+
+          <aside class="estimator-card">
+            <div style="display:flex;justify-content:space-between;align-items:center;padding-bottom:12px;border-bottom:1px solid var(--border);">
+              <h3>Test &amp; Package Estimator</h3>
+              <button type="button" id="clearEstimateBtn" style="background:none;border:none;color:var(--ink-muted);font-size:0.82rem;font-weight:600;cursor:pointer;">Clear all</button>
+            </div>
+            <ul class="estimator-list" id="estimatorList"></ul>
+            <div class="estimator-total">
+              <span style="font-size:0.9rem;color:var(--ink-secondary);font-weight:600;">Standard Reference</span>
+              <strong id="estimatorTotal">&#8369;0</strong>
+            </div>
+            <a href="index.html#contact" class="btn btn-primary" style="width:100%;margin-bottom:10px;" id="sendCorpEstimateBtn">Request Corporate Quote</a>
+            <a href="index.html#contact" class="btn btn-outline btn-sm" style="width:100%;" id="sendIndEstimateBtn">Book Individual Visit</a>
+            <p class="compliance-note">Corporate volume discounts apply to group APEs. Eligible PhilHealth YAKAP members may avail covered tests per doctor's advice.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- 54 GAMOT Medicines -->
+    <section class="section section-warm" id="botika">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow eyebrow-gold">Sagip Buhay Botika &bull; PhilHealth GAMOT</span>
+          <h2>54 Covered Outpatient Medicines</h2>
+          <p class="section-lead">Search our PhilHealth GAMOT directory below. Eligible PhilHealth YAKAP members can avail covered, doctor-prescribed outpatient medicines up to &#8369;20,000/year subject to program rules.</p>
+        </div>
+
+        <div style="margin-bottom:24px;">
+          <div class="search-box" style="max-width:440px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input type="search" id="medSearch" class="search-input" placeholder="Search medicine (e.g., Atorvastatin, Telmisartan, Omeprazole)...">
+          </div>
+          <div class="filter-pills" id="medCategoryPills"></div>
+        </div>
+
+        <div class="grid-3" id="botikaContainer"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-bottom" style="padding-top:0;">
+      <span>&copy; <span id="currentYear">2026</span> Sagip Buhay Medical Services (SagipBuhay Medical Inc.).</span>
+      <span><a href="index.html" style="color:var(--gold-400);">&larr; Back to Home</a></span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
